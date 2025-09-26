@@ -1,0 +1,263 @@
+@font-face {
+    font-family: "Centra";
+    src: url(fonts/CentraNo2-Book.woff2);
+}
+
+@font-face {
+    font-family: "Centra medium";
+    src: url(fonts/CentraNo2-Medium.woff2);
+}
+
+@font-face {
+    font-family: "Centra bold";
+    src: url(fonts/CentraNo2-Bold.woff2);
+}
+
+@font-face {
+    font-family: "Recoleta";
+    src: url(fonts/Recoleta-Regular.woff2);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --red: #D11544;
+    --blue:#1668E3;
+    --primary-bg-color:#191E3B;
+    --secondary-bg-color:#F8F3E7;
+    --grey: #D7D8DA;
+    font-family: "Centra";
+}
+
+body {
+    min-height: 100vh;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.flex {
+    display: flex;
+}
+
+.column {
+    flex-direction: column;
+}
+
+.align-items-center {
+    align-items: center;
+}
+
+.justify-content-center {
+    justify-content: center;
+}
+
+.space-between {
+    justify-content: space-between;
+}
+
+.gap {
+    gap: 1.75rem;
+}
+
+header, #nav-wrapper {
+    width: 100%;
+}
+
+#nav-wrapper {
+    border-bottom: 1px solid var(--grey);
+    box-shadow: 0 1px 13px rgba(0,0,0,0.05);
+}
+
+main {
+    min-height: 100vh;
+}
+
+nav, main, #hero {
+    width: 62.5%;
+}
+
+nav {
+    height: 75px;
+    font-size: .9rem;
+}
+
+#nav-left > * {
+    width: 50%;
+    text-wrap: nowrap;
+    color: var(--red);
+}
+
+#nav-search-logo {
+    height: 1rem;
+}
+
+nav a, nav span {
+    color: var(--red);
+    font-family: "Centra medium";
+}
+
+#download {
+    height: 1rem;
+    position: relative;
+    bottom: 1px;
+}
+
+#nav-right button {
+    height: fit-content;
+    padding: .5rem 1rem;
+    background: none;
+    border: 0.1px solid var(--grey);
+    border-radius: 5rem;  
+}
+
+#nav-right button span {
+    color: var(--blue);
+}
+
+.mini-gap {
+    gap: 1rem;
+}
+
+.smaller-gap {
+    gap: .375rem;
+}
+
+#msg {
+    height: 1.5rem;
+    position: relative;
+    top: 4px;
+}
+
+#flag {
+    height: .875rem;
+}
+
+#hero {
+    background-image: url(hote.com/Hotels.com/imgi_3_Hcom_Hero_Banner_Masked.webp);
+    background-size: cover;
+    height: 400px;
+    border-radius: 1rem;
+}
+
+form {
+    width: 83%;
+    background: white;
+    padding: 1.5rem;
+    border-radius: 1rem;
+}
+
+#hero input {
+    border: 1px solid grey;
+    border-radius: .5rem;
+    padding: 0.5rem 1rem;
+}
+
+#hero form button {
+    padding: .75rem 1.25rem;
+    border-radius: 5rem;
+    border: none;
+    background: var(--primary-bg-color);
+    color: white;
+    font-family: "Centra medium";
+    font-size: 1rem;
+}
+
+.form-item {
+    position: relative;
+}
+
+.form-item > label {
+    position: absolute;
+    top: 0;
+}
+
+.form-item > img {
+    position: absolute;
+    left: 0;
+    height: 1.25rem;
+}
+
+#login-promo {
+    background: var(--primary-bg-color);
+    color: white;
+    padding: 1rem;
+    border-radius: 1rem;
+    width: calc(100% - 2rem);
+    font-family: "Centra medium";
+}
+
+
+#login-promo img {
+    height: 3rem;
+}
+
+#login-promo p {
+    width: 80%;
+}
+
+#login-promo button {
+    font-family: "Centra medium";
+    font-size: 0.75rem;
+    padding: 0.5rem;
+    border-radius: 3rem;
+    border: none;
+    background-color: var(--primary-bg-color);
+    color: white;
+}
+
+#promo-cards > div {
+    width: 32.5%;
+}
+
+#promo-cards > div > * {
+    max-width: 50%;
+}
+
+.promo-card > div {
+    border-radius: 1rem 0 0 1rem;
+    background: var(--secondary-bg-color);
+    padding: 1rem;
+}
+
+.promo-card img {
+    border-radius:0 1rem 1rem 0  ;
+}
+
+.promo-text-medium {
+    font-family: "Centra medium";
+}
+
+.promo-text-small {
+    font-size: .75rem;
+}
+
+.text-medium-wrapper img {
+    height: 1rem;
+}
+
+#promo-hero {
+    min-height: 510px;
+    width: 100%;
+    background-image: url(hote.com/Hotels.com/imgi_8_HP_fr_FR_D_NM.jpg);
+    background-size: contain;
+    background-repeat: repeat;
+}
+
+#test {
+    height: 500px;
+    background: red;
+    width: 100%;
+}
