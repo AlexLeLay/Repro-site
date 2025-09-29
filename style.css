@@ -39,6 +39,19 @@ body {
     align-items: center;
 }
 
+h3 {
+    font-family: "Recoleta";
+    font-size: 2.25rem;
+    font-weight: 400;
+}
+
+h2 {
+    font-family: "Recoleta";
+    font-size: 1.75rem;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
 ul {
     list-style: none;
 }
@@ -249,15 +262,95 @@ form {
 }
 
 #promo-hero {
-    min-height: 510px;
+    min-height: 515px;
     width: 100%;
     background-image: url(hote.com/Hotels.com/imgi_8_HP_fr_FR_D_NM.jpg);
     background-size: contain;
     background-repeat: repeat;
+    position: relative;
+    border-radius: 1rem;
+}
+
+#promo-hero > div {
+    background: var(--secondary-bg-color);
+    padding: 1.75rem;
+    border-radius: 1rem;
+    width: calc(388px - 3.5rem);
+    position: absolute;
+    bottom: 3rem;
+    left: 3rem;
+}
+
+#promo-hero p {
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+#promo-hero button {
+    width: fit-content;
+    padding: .75rem 1.25rem;
+    border-radius: 5rem;
+    font-weight: bold;
+    border: none;
+    background: var(--primary-bg-color);
+    color: white;
+    margin-top: 20px;
 }
 
 #test {
     height: 500px;
     background: red;
     width: 100%;
+}
+
+#discover {
+    width: 100%;
+}
+
+#discover div {
+    gap: 1rem;
+}
+
+#discover a {
+    width: 20%;
+}
+
+#discover img {
+    width: 100%;
+    height: 100%;
+    border-radius: 1rem;
+}
+
+.img-container {
+    position: relative;
+}
+
+.truc {
+    position: absolute;
+    bottom: .5rem;
+    left: .5rem;
+    color: white;
+    font-family: "Centra bold";
+}
+
+#limited-booking {
+    width: 100%;
+    position: relative;
+}
+
+#limited-booking button {
+    position: absolute;
+    right: 1rem;
+    top: 0;
+    padding: .75rem 1.25rem;
+    border-radius: 5rem;
+    font-weight: bold;
+    border: none;
+    background: var(--primary-bg-color);
+    color: white;
+}
+
+.bolder {
+    font-family: "Centra medium";
+    font-weight: 700;
 }
