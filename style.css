@@ -354,3 +354,74 @@ form {
     font-family: "Centra medium";
     font-weight: 700;
 }
+
+.booking-card {
+    width: 25%;
+}
+
+.note {
+    background: #227950;
+    color: white;
+    font-size: .75rem;
+    font-family: "Centra medium";
+    padding: .25rem .5rem;
+    border-radius: .25rem;
+}
+
+.review-cat {
+    font-size: .875rem;
+    font-family: "Centra medium";
+}
+
+.reviews {
+    font-size: .75rem;
+}
+
+.name {
+    font-family: "Centra medium";
+}
+
+.location {
+    font-size: .875rem;
+}
+
+.low {
+    font-size: 1.25rem;
+    font-family: "Centra medium";
+}
+
+.normal {
+    text-decoration:line-through;
+    display: flex;
+    align-items: baseline;
+    font-weight: 400;
+}
+
+.euro {
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.card-content .smaller-gap {
+    gap: .1rem;
+}
+
+.price-infos {
+    height: 1.25rem;
+    position: relative;
+    top: 2px;
+}
+
+.tag-content {
+    background: #7b1fa2;
+    color: white;
+    align-items: center;
+    font-weight: bold;
+    gap: 1rem;
+    width: fit-content;
+    padding: .25rem .5rem;
+    border-radius: .375rem;
+}
+
+.tag-content img {
+    height: 1.5rem;
+}
