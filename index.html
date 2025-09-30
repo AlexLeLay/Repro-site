@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>Hotels.com - Promotions et réductions sur vos réservations d’hôtels, du luxe à l’économique</title>
+    <link rel="shortcut icon" href="hote.com/Hotels.com/favicon.ico" type="image/x-icon">
 </head>
 <body class="flex column align-items-center gap">
     <header class="flex column align-items-center gap">
@@ -42,22 +43,28 @@
             </nav>
         </div>
         <div id="hero" class="flex align-items-center justify-content-center">
-            <form class="flex align-items-center justify-content-center space-between">
-                <div class="flex align-items-center space-between">
-                    <div class="form-item">
+            <form class="flex align-items-center justify-content-center space-between mini-gap">
+                <div id="form-items" class="flex align-items-center">
+                    <div class="form-item flex align-items-center">
                         <img src="hote.com/Hotels.com/téléchargement (19).svg" alt="">
-                        <label for="">Où allez-vous ?</label>
-                        <input type="text" placeholder="Où allez-vous ?">
+                        <div>
+                            <label for="">Où allez-vous ?</label>
+                            <input type="text" placeholder="Où allez-vous ?">
+                        </div>
                     </div>
-                    <div class="form-item">
+                    <div class="form-item flex align-items-center">
                         <img src="hote.com/Hotels.com/téléchargement (18).svg" alt="">
-                        <label for="">Dates</label>
-                        <input type="date">
+                        <div>
+                            <label for="">Dates</label>
+                            <input type="text" placeholder="">
+                        </div>
                     </div>
-                    <div class="form-item">
+                    <div class="form-item flex align-items-center">
                         <img src="hote.com/Hotels.com/téléchargement (17).svg" alt="">
-                        <label for="">Voyageurs</label>
-                        <input type="text" placeholder="2 personnes, 1 chambre">
+                        <div>
+                            <label for="">Voyageurs</label>
+                            <input type="text" placeholder="2 personnes, 1 chambre">
+                        </div>
                     </div>
                 </div>
                 <button>Rechercher</button>
@@ -137,11 +144,11 @@
             </div>
         </section>
         <section id="limited-booking">
-            <h2>-25% ou plus : réserveez d'ici le 20/10</h2>
+            <h2>-25% ou plus : réservez d'ici le 20/10</h2>
             <button>Voir plus d'offres</button>
             <div>
-                <p>Offres affichées : <span class="bolder">du 10 oct. au 12 oct.</span></p>
-                <div id="booking-cards" class="flex">
+                <p class="heading">Offres affichées : <span class="bolder">du 10 oct. au 12 oct.</span></p>
+                <div id="booking-cards" class="flex space-between">
                     <div class="booking-card">
                         <div class="img-container">
                             <img src="hote.com/Hotels.com/img_1.png" alt="">
@@ -152,15 +159,17 @@
                                 <p class="name">Star Champs Elysées</p>
                                 <p class="location">Paris</p>
                             </div>
-                            <div>
+                            <div class="prices">
                                 <div class="flex align-items-center smaller-gap">
                                     <span class="low">563 <span class="euro">€</span></span>
                                     <span class="normal">775 <span class="euro">€</span></span>
-                                    <img class="price-infos" src="hote.com/Hotels.com/téléchargement (9).svg" alt="">
+                                    <img class="price-infos-dot" src="hote.com/Hotels.com/téléchargement (9).svg" alt="">
                                 </div>
-                                <p>pour 2 nuits, 1 chambre</p>
-                                <p>281 € par nuit</p>
-                                <p>taxes et frais compris</p>
+                                <div class="price-infos">
+                                    <p>pour 2 nuits, 1 chambre</p>
+                                    <p>281 € par nuit</p>
+                                    <p>taxes et frais compris</p>
+                                </div>
                             </div>
                             <div class="tag-content flex">
                                 <img src="hote.com/Hotels.com/téléchargement (10).svg" alt="">
@@ -168,21 +177,27 @@
                             </div>
                         </div>
                     </div>
-                                        <div class="booking-card">
+                    <div class="booking-card">
                         <div class="img-container">
                             <img src="hote.com/Hotels.com/img_1.png" alt="">
                         </div>
                         <div class="card-content">
                             <div>
-                                <p><span class="note">9,0</span> <span>Merveilleux</span> <span>(250 avis)</span></p>
+                                <p><span class="note">9,0</span> <span class="review-cat">Merveilleux</span> <span class="reviews">(250 avis)</span></p>
                                 <p class="name">Star Champs Elysées</p>
                                 <p class="location">Paris</p>
                             </div>
-                            <div>
-                                <p><span class="low">563 €</span> <span class="normal">775 €</span></p>
-                                <p>pour 2 nuits, 1 chambre</p>
-                                <p>281 € par nuit</p>
-                                <p>taxes et frais compris</p>
+                            <div class="prices">
+                                <div class="flex align-items-center smaller-gap">
+                                    <span class="low">563 <span class="euro">€</span></span>
+                                    <span class="normal">775 <span class="euro">€</span></span>
+                                    <img class="price-infos-dot" src="hote.com/Hotels.com/téléchargement (9).svg" alt="">
+                                </div>
+                                <div class="price-infos">
+                                    <p>pour 2 nuits, 1 chambre</p>
+                                    <p>281 € par nuit</p>
+                                    <p>taxes et frais compris</p>
+                                </div>
                             </div>
                             <div class="tag-content flex">
                                 <img src="hote.com/Hotels.com/téléchargement (10).svg" alt="">
@@ -190,21 +205,27 @@
                             </div>
                         </div>
                     </div>
-                                        <div class="booking-card">
+                    <div class="booking-card">
                         <div class="img-container">
                             <img src="hote.com/Hotels.com/img_1.png" alt="">
                         </div>
                         <div class="card-content">
                             <div>
-                                <p><span class="note">9,0</span> <span>Merveilleux</span> <span>(250 avis)</span></p>
+                                <p><span class="note">9,0</span> <span class="review-cat">Merveilleux</span> <span class="reviews">(250 avis)</span></p>
                                 <p class="name">Star Champs Elysées</p>
                                 <p class="location">Paris</p>
                             </div>
-                            <div>
-                                <p><span class="low">563 €</span> <span class="normal">775 €</span></p>
-                                <p>pour 2 nuits, 1 chambre</p>
-                                <p>281 € par nuit</p>
-                                <p>taxes et frais compris</p>
+                            <div class="prices">
+                                <div class="flex align-items-center smaller-gap">
+                                    <span class="low">563 <span class="euro">€</span></span>
+                                    <span class="normal">775 <span class="euro">€</span></span>
+                                    <img class="price-infos-dot" src="hote.com/Hotels.com/téléchargement (9).svg" alt="">
+                                </div>
+                                <div class="price-infos">
+                                    <p>pour 2 nuits, 1 chambre</p>
+                                    <p>281 € par nuit</p>
+                                    <p>taxes et frais compris</p>
+                                </div>
                             </div>
                             <div class="tag-content flex">
                                 <img src="hote.com/Hotels.com/téléchargement (10).svg" alt="">
@@ -212,21 +233,27 @@
                             </div>
                         </div>
                     </div>
-                                        <div class="booking-card">
+                    <div class="booking-card">
                         <div class="img-container">
                             <img src="hote.com/Hotels.com/img_1.png" alt="">
                         </div>
                         <div class="card-content">
                             <div>
-                                <p><span class="note">9,0</span> <span>Merveilleux</span> <span>(250 avis)</span></p>
+                                <p><span class="note">9,0</span> <span class="review-cat">Merveilleux</span> <span class="reviews">(250 avis)</span></p>
                                 <p class="name">Star Champs Elysées</p>
                                 <p class="location">Paris</p>
                             </div>
-                            <div>
-                                <p><span class="low">563 €</span> <span class="normal">775 €</span></p>
-                                <p>pour 2 nuits, 1 chambre</p>
-                                <p>281 € par nuit</p>
-                                <p>taxes et frais compris</p>
+                            <div class="prices">
+                                <div class="flex align-items-center smaller-gap">
+                                    <span class="low">563 <span class="euro">€</span></span>
+                                    <span class="normal">775 <span class="euro">€</span></span>
+                                    <img class="price-infos-dot" src="hote.com/Hotels.com/téléchargement (9).svg" alt="">
+                                </div>
+                                <div class="price-infos">
+                                    <p>pour 2 nuits, 1 chambre</p>
+                                    <p>281 € par nuit</p>
+                                    <p>taxes et frais compris</p>
+                                </div>
                             </div>
                             <div class="tag-content flex">
                                 <img src="hote.com/Hotels.com/téléchargement (10).svg" alt="">
@@ -237,7 +264,291 @@
                 </div>
             </div>
         </section>
+        <section id="popular-locations">
+            <h2>Découvrez les hébergements dans les destinations populaires</h2>
+            <div>
+                <p class="heading">Tarifs moyens basés sur le mois civil en cours</p>
+                <ul class="flex gap">
+                    <li class="active">Plage</li>
+                    <li>Culture</li>
+                    <li>Ski</li>
+                    <li>Famille</li>
+                    <li>Bien-être et relaxation</li>
+                </ul>
+                <hr>
+                <div id="popular-cards" class="flex space-between">
+                    <div class="popular-card">
+                        <div class="img-container">
+                            <img src="hote.com/Hotels.com/imgi_177_99109-Ostend.jpg" alt="">
+                        </div>
+                        <div class="card-content">
+                            <div>
+                                <p class="name">Ostende</p>
+                                <p class="location">Région flamande, Belgique</p>
+                            </div>
+                            <div class="prices">
+                                <span class="low">135 <span class="euro">€</span></span>
+                                <p class="price-infos">tarif moyen par nuit</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="popular-card">
+                        <div class="img-container">
+                            <img src="hote.com/Hotels.com/imgi_177_99109-Ostend.jpg" alt="">
+                        </div>
+                        <div class="card-content">
+                            <div>
+                                <p class="name">Ostende</p>
+                                <p class="location">Région flamande, Belgique</p>
+                            </div>
+                            <div class="prices">
+                                <span class="low">135 <span class="euro">€</span></span>
+                                <p class="price-infos">tarif moyen par nuit</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="popular-card">
+                        <div class="img-container">
+                            <img src="hote.com/Hotels.com/imgi_177_99109-Ostend.jpg" alt="">
+                        </div>
+                        <div class="card-content">
+                            <div>
+                                <p class="name">Ostende</p>
+                                <p class="location">Région flamande, Belgique</p>
+                            </div>
+                            <div class="prices">
+                                <span class="low">135 <span class="euro">€</span></span>
+                                <p class="price-infos">tarif moyen par nuit</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="popular-card">
+                        <div class="img-container">
+                            <img src="hote.com/Hotels.com/imgi_177_99109-Ostend.jpg" alt="">
+                        </div>
+                        <div class="card-content">
+                            <div>
+                                <p class="name">Ostende</p>
+                                <p class="location">Région flamande, Belgique</p>
+                            </div>
+                            <div class="prices">
+                                <span class="low">135 <span class="euro">€</span></span>
+                                <p class="price-infos">tarif moyen par nuit</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="limited-booking">
+            <h2>Explorez ces séjours uniques</h2>
+            <div>
+                <p class="heading">Offres affichées : <span class="bolder">du 24 oct. au 26 oct.</span></p>
+                <div id="booking-cards" class="flex space-between">
+                    <div class="booking-card">
+                        <div class="img-container">
+                            <div class="booking-buttons" class="flex space-between">
+                                <img src="hote.com/Hotels.com/téléchargement (12).svg" alt="">
+                                <img src="hote.com/Hotels.com/téléchargement (11).svg" alt="">
+                            </div>
+                            <img src="hote.com/Hotels.com/img_1.png" alt="">
+                        </div>
+                        <div class="card-content">
+                            <div>
+                                <p><span class="note">9,0</span> <span class="review-cat">Merveilleux</span> <span class="reviews">(250 avis)</span></p>
+                                <p class="name">Star Champs Elysées</p>
+                                <p class="location">Paris</p>
+                            </div>
+                            <div class="prices">
+                                <div class="flex align-items-center smaller-gap">
+                                    <span class="low">563 <span class="euro">€</span></span>
+                                    <span class="normal">775 <span class="euro">€</span></span>
+                                    <img class="price-infos-dot" src="hote.com/Hotels.com/téléchargement (9).svg" alt="">
+                                </div>
+                                <div class="price-infos">
+                                    <p>pour 2 nuits, 1 chambre</p>
+                                    <p>281 € par nuit</p>
+                                    <p>taxes et frais compris</p>
+                                </div>
+                            </div>
+                            <div class="tag-content flex">
+                                <img src="hote.com/Hotels.com/téléchargement (10).svg" alt="">
+                                <p>Prix membre disponible</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="booking-card">
+                        <div class="img-container">
+                            <img src="hote.com/Hotels.com/img_1.png" alt="">
+                        </div>
+                        <div class="card-content">
+                            <div>
+                                <p><span class="note">9,0</span> <span class="review-cat">Merveilleux</span> <span class="reviews">(250 avis)</span></p>
+                                <p class="name">Star Champs Elysées</p>
+                                <p class="location">Paris</p>
+                            </div>
+                            <div class="prices">
+                                <div class="flex align-items-center smaller-gap">
+                                    <span class="low">563 <span class="euro">€</span></span>
+                                    <span class="normal">775 <span class="euro">€</span></span>
+                                    <img class="price-infos-dot" src="hote.com/Hotels.com/téléchargement (9).svg" alt="">
+                                </div>
+                                <div class="price-infos">
+                                    <p>pour 2 nuits, 1 chambre</p>
+                                    <p>281 € par nuit</p>
+                                    <p>taxes et frais compris</p>
+                                </div>
+                            </div>
+                            <div class="tag-content flex">
+                                <img src="hote.com/Hotels.com/téléchargement (10).svg" alt="">
+                                <p>Prix membre disponible</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="booking-card">
+                        <div class="img-container">
+                            <img src="hote.com/Hotels.com/img_1.png" alt="">
+                        </div>
+                        <div class="card-content">
+                            <div>
+                                <p><span class="note">9,0</span> <span class="review-cat">Merveilleux</span> <span class="reviews">(250 avis)</span></p>
+                                <p class="name">Star Champs Elysées</p>
+                                <p class="location">Paris</p>
+                            </div>
+                            <div class="prices">
+                                <div class="flex align-items-center smaller-gap">
+                                    <span class="low">563 <span class="euro">€</span></span>
+                                    <span class="normal">775 <span class="euro">€</span></span>
+                                    <img class="price-infos-dot" src="hote.com/Hotels.com/téléchargement (9).svg" alt="">
+                                </div>
+                                <div class="price-infos">
+                                    <p>pour 2 nuits, 1 chambre</p>
+                                    <p>281 € par nuit</p>
+                                    <p>taxes et frais compris</p>
+                                </div>
+                            </div>
+                            <div class="tag-content flex">
+                                <img src="hote.com/Hotels.com/téléchargement (10).svg" alt="">
+                                <p>Prix membre disponible</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="booking-card">
+                        <div class="img-container">
+                            <img src="hote.com/Hotels.com/img_1.png" alt="">
+                        </div>
+                        <div class="card-content">
+                            <div>
+                                <p><span class="note">9,0</span> <span class="review-cat">Merveilleux</span> <span class="reviews">(250 avis)</span></p>
+                                <p class="name">Star Champs Elysées</p>
+                                <p class="location">Paris</p>
+                            </div>
+                            <div class="prices">
+                                <div class="flex align-items-center smaller-gap">
+                                    <span class="low">563 <span class="euro">€</span></span>
+                                    <span class="normal">775 <span class="euro">€</span></span>
+                                    <img class="price-infos-dot" src="hote.com/Hotels.com/téléchargement (9).svg" alt="">
+                                </div>
+                                <div class="price-infos">
+                                    <p>pour 2 nuits, 1 chambre</p>
+                                    <p>281 € par nuit</p>
+                                    <p>taxes et frais compris</p>
+                                </div>
+                            </div>
+                            <div class="tag-content flex">
+                                <img src="hote.com/Hotels.com/téléchargement (10).svg" alt="">
+                                <p>Prix membre disponible</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="app">
+            <div>
+                <div class="flex align-items-center space-between">
+                    <p class="heading">Découvrez d'autres hôtels</p>
+                    <img id="dropdown" src="hote.com/Hotels.com/téléchargement (23).svg" alt="">
+                </div>
+                <div id="app-container" class="flex">
+                    <img class="left-pic" src="hote.com/Hotels.com/imgi_79_HCOM_POOL_Stocksy_300dpi.jpg" alt="">
+                    <div class="app-content">
+                        <h2>Grâce à l'appli Hotels.com, vous pourrez :</h2>
+                        <ul class="flex column">
+                            <li>économiser sur une sélection d'hôtels</li>
+                            <li>recevoir 1 nuit bonus* chaque fois que vous séjournez 10 nuits</li>
+                            <li>trouver votre séjour, le réserver et économiser – où que vous soyez</li>
+                        </ul>
+                        <div class="flex column space-between bottom">
+                            <p>Scannez le code QR avec l'appareil photo de votre appareil et téléchargez notre appli.</p>
+                            <a href="#">* Voir les conditions générales du programme Hotels.com Rewards</a>
+                        </div>
+
+                    </div>
+                    <div class="qr-code-container">
+                        <img class="qr-code" src="hote.com/Hotels.com/imgi_80_default.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
-    <footer></footer>
+    <footer>
+        <div id="footer-content">
+            <img src="hote.com/Hotels.com/imgi_81_EG_Wordmark_blue_RGB.svg" alt="">
+            <div class="lists">
+                <ul class="flex list-of-lists space-between">
+                    <ul class="flex column">
+                        <li>Destinations phares</li>
+                        <li>Hôtels en France</li>
+                        <li>Hôtels au Canada</li>
+                        <li>Hôtels au Maroc</li>
+                        <li>Hôtels en Algérie</li>
+                        <li>Hôtels aux États-Unis d'Amérique</li>
+                        <li>Hôtels au Sénégal</li>
+                        <li>Hôtels au Portugal</li>
+                        <li>Hôtels en Tunisie</li>
+                        <li>Hôtels en Côte d'Ivoire</li>
+                        <li>Hôtels en Espagne</li>
+                    </ul>
+                    <ul class="flex column">
+                        <li>Assitance et FAQ</li>
+                        <li>Vos réservations</li>
+                        <li>FAQ</li>
+                        <li>Nous contacter</li>
+                        <li>Évaluer un hébergement</li>
+                    </ul>
+                    <ul class="flex column">
+                        <li>Réservé aux fournisseurs, affiliés et médias</li>
+                        <li>Affiliation</li>
+                        <li>Promouvoir vos services</li>
+                        <li>Agents de voyages</li>
+                    </ul>
+                    <ul class="flex column">
+                        <li>Politiques</li>
+                        <li>Conditions générales d'utilisation</li>
+                        <li>Conditions Générales d'Utilisation d'Abritel</li>
+                        <li>Accessibilité</li>
+                        <li>Politique sur la protection des données</li>
+                        <li>Cookies</li>
+                        <li>Mentions légales / Nous contacter</li>
+                        <li>Comment fonctionne notre site</li>
+                        <li>Directives de contenu et signalement de contenus</li>
+                    </ul>
+                    <ul class="flex column">
+                        <li>Autres informations</li>
+                        <li>Qui sommes-nous ?</li>
+                        <li>Emplois</li>
+                        <li>Guides de voyage</li>
+                    </ul>
+                </ul>
+            </div>
+            <hr>
+            <div>
+                <p>* Dans certains hôtels, les annulations doivent obligatoirement être effectuées au moins 24 heures avant l’arrivée. Plus de détails sur le site.</p>
+                <p>Parmi les moyens de paiement acceptés sur fr.hotels.com figurent : American Express, Diner’s Club International, MasterCard, Visa, Visa Electron, CartaSi, Carte Bleue, PayPal et Eurocard.</p>
+                <p>© 2025 Hotels.com, L.P., une entreprise d’Expedia Group. Tous droits réservés. Hotels.com et le logo Hotels.com sont des marques commerciales ou des marques déposées d’Hotels.com, L.P.</p>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>

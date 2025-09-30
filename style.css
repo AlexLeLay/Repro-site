@@ -132,7 +132,7 @@ nav a, nav span {
     height: fit-content;
     padding: .5rem 1rem;
     background: none;
-    border: 0.1px solid var(--grey);
+    border: 0.1px solid #818494;
     border-radius: 5rem;  
 }
 
@@ -172,10 +172,16 @@ form {
     border-radius: 1rem;
 }
 
+#form-items {
+    flex: 11;
+    gap: .75rem;
+}
+
 #hero input {
-    border: 1px solid grey;
+    --padding-inline: .75rem;
+    border: none;
     border-radius: .5rem;
-    padding: 0.5rem 1rem;
+    width: calc(100% - calc(var(--padding-inline) * 2));
 }
 
 #hero form button {
@@ -186,10 +192,20 @@ form {
     color: white;
     font-family: "Centra medium";
     font-size: 1rem;
+    flex: 1;
+}
+
+form label {
+    font-size: .75rem;
+    font-family: "Centra bold";
+    left: 2rem;
 }
 
 .form-item {
     position: relative;
+    width: 33%;
+    border: 1px solid grey;
+    border-radius: .5rem;
 }
 
 .form-item > label {
@@ -197,10 +213,15 @@ form {
     top: 0;
 }
 
+input::placeholder {
+    font-family: "Centra";
+    font-size: 1rem;
+    color: var(--primary-bg-color);
+}
+
 .form-item > img {
-    position: absolute;
-    left: 0;
     height: 1.25rem;
+    padding: .75rem;
 }
 
 #login-promo {
@@ -325,6 +346,56 @@ form {
     position: relative;
 }
 
+.booking-buttons {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
+.booking-buttons img {
+    height: 1.5rem !important;
+}
+
+
+
+/* #booking-cards .img-container::before {
+    content: url(hote.com/Hotels.com/téléchargement\ \(12\).svg);
+    top: calc(50% - 1.25rem);
+    left: 1rem;
+}
+
+#booking-cards .img-container::after {
+    content: url(hote.com/Hotels.com/téléchargement\ \(11\).svg);
+    bottom: calc(50% - 1.25rem);
+    right: 1rem;
+}
+
+#booking-cards .img-container::before, #booking-cards .img-container::after {
+    height: 1.5rem;
+    aspect-ratio: 1;
+    display: inline-block;
+    position: absolute;
+    background: rgba(12, 14, 28, 0.6);
+    border-radius: 50%;
+    padding: .5rem;
+}
+
+#booking-cards .img-container:hover::before, #booking-cards .img-container:hover::after {
+    background: rgba(12, 14, 28, 0.8);
+    cursor: pointer;
+}  */
+
+#booking-cards .img-container {
+    position: relative;
+    margin-bottom: .5rem;
+}
+
+#booking-cards .img-container img {
+    height: 208px;
+    width: 100%;
+    border-radius: 1rem;;
+}
+
 .truc {
     position: absolute;
     bottom: .5rem;
@@ -336,6 +407,10 @@ form {
 #limited-booking {
     width: 100%;
     position: relative;
+}
+
+.heading {
+    font-size: .875rem;
 }
 
 #limited-booking button {
@@ -355,8 +430,13 @@ form {
     font-weight: 700;
 }
 
+#booking-cards {
+    margin-top: 1rem;
+    gap:1.25rem;
+}
+
 .booking-card {
-    width: 25%;
+    width: calc(25% - 1.25rem);
 }
 
 .note {
@@ -379,6 +459,8 @@ form {
 
 .name {
     font-family: "Centra medium";
+    margin-top: .75rem;
+    margin-bottom: .5rem;
 }
 
 .location {
@@ -405,23 +487,223 @@ form {
     gap: .1rem;
 }
 
-.price-infos {
+.prices {
+    margin-top: 2.5rem;
+}
+
+.price-infos-dot {
     height: 1.25rem;
-    position: relative;
-    top: 2px;
+}
+
+.price-infos {
+    font-size: .75rem;
 }
 
 .tag-content {
     background: #7b1fa2;
     color: white;
     align-items: center;
-    font-weight: bold;
-    gap: 1rem;
+    font-family: "Centra medium";
+    font-size: .75rem;
+    gap: .375rem;
     width: fit-content;
     padding: .25rem .5rem;
     border-radius: .375rem;
+    margin-top: .5rem;
 }
 
 .tag-content img {
-    height: 1.5rem;
+    height: 1.125rem;
+}
+
+#popular-locations {
+    width: 100%;
+}
+
+#popular-cards {
+    gap:1.25rem;
+}
+
+.popular-card {
+    width: calc(25% - 1.25rem);
+    border: 1px solid #DFE0E4;
+    border-radius: 1rem;
+}
+
+.popular-card * {
+    margin: 0;
+}
+
+#popular-locations ul {
+    margin-top: 1.5rem;
+}
+
+#popular-locations li {
+    font-size: 0.875rem;
+    font-family: "Centra medium";
+}
+
+#popular-locations li:hover {
+    text-decoration: underline 2px;
+    text-underline-offset: 11px;
+    cursor: pointer;
+}
+
+#popular-locations .active {
+    color:var(--blue);
+    text-decoration: underline var(--blue) 2px;
+    text-underline-offset: 11px;
+}
+
+.popular-card .location {
+    margin-block: .375rem .5rem;
+}
+
+.popular-card .card-content {
+    padding: .625rem;
+}
+
+#popular-locations .img-container img {
+    height: 154px;
+    width: 100%;
+    border-radius: 1rem 1rem 0 0;
+}
+
+hr {
+    border: 1px solid #DFE0E4;
+    margin-block: .5rem 1.75rem;
+}
+
+#app {
+    width: 100%;
+    margin-top: 1.5rem;
+}
+
+#app > div {
+    padding-inline: 1.5rem;
+}
+
+#app-container {
+    width: 100%;
+    height: 340px;
+    border-radius: 1rem;
+    border: 1px solid #DFE0E4;
+    margin-top: 2.125rem;
+}
+
+#app .heading {
+    font-family: "Centra bold";
+    font-size: 1rem;
+}
+
+#dropdown {
+    height: 1.25rem;
+}
+
+.left-pic {
+    max-width: 33%;
+    border-radius: 1rem 0 0 1rem;
+}
+
+.app-content {
+    padding: 1.5rem;
+}
+
+#app ul {
+    margin-top: .5rem;
+}
+
+#app li {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: 0.875rem;
+}
+
+#app li::before {
+    --size:20px;
+    content: "•";
+    font-size: var(--size);
+    position: relative;
+    height: fit-content;
+    display: inline-block;
+}
+
+.qr-code {
+    height: 146px;
+    position: relative;
+    top: 3rem;
+    right: 1.375rem;
+}
+
+#app h2 {
+    font-size: 2.25rem;
+    margin: 0;
+    line-height: 2.25rem;
+}
+
+#app a {
+    text-decoration: underline;
+    color: #1668E3;
+}
+
+.app-content p {
+    font-family: "Centra bold";
+}
+
+.app-content > div {
+    margin-top: 3rem;
+}
+
+.app-content .bottom {
+    height: 30%;
+}
+
+
+footer {
+    background: #F8F3E7;
+    width: 99%;
+    border-radius: 1rem;
+    margin-bottom: .5rem;
+    padding-block: 2rem;
+}
+
+#footer-content {
+    width: 64%;
+    margin: 0 auto;
+}
+
+footer p {
+    font-size: 0.75rem;
+    text-align: center;
+}
+
+footer ul ul li:first-of-type {
+    font-family: "Centra medium";
+    font-size: .875rem;
+    color: black;
+}
+
+footer li {
+    font-family: "Centra medium";
+    font-size: .75rem;
+    color: var(--blue);
+}
+
+.lists {
+    margin-top: 2rem;
+}
+
+.list-of-lists {
+    width: 100%;
+    gap: 1.25rem;
+}
+
+.list-of-lists ul {
+    gap: 1rem;
+    width: calc(20%);
+}
+
+footer hr {
+    margin-top: 2rem;
 }
