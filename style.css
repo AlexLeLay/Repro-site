@@ -32,11 +32,16 @@
     font-family: "Centra";
 }
 
+html {
+        background: var(--secondary-bg-color);
+}
+
 body {
     min-height: 100vh;
     width: 100%;
     flex-direction: column;
     align-items: center;
+    background-color: white;
 }
 
 h3 {
@@ -100,6 +105,7 @@ main {
 
 nav, main, #hero {
     width: 62.5%;
+    min-width: 1200px;
 }
 
 nav {
@@ -182,6 +188,7 @@ form {
     border: none;
     border-radius: .5rem;
     width: calc(100% - calc(var(--padding-inline) * 2));
+    text-overflow: ellipsis;
 }
 
 #hero form button {
@@ -195,10 +202,16 @@ form {
     flex: 1;
 }
 
+div:has(input) {
+    overflow: hidden;
+}
+
 form label {
     font-size: .75rem;
     font-family: "Centra bold";
     left: 2rem;
+    text-wrap: nowrap;
+    text-overflow: ellipsis;
 }
 
 .form-item {
@@ -217,6 +230,7 @@ input::placeholder {
     font-family: "Centra";
     font-size: 1rem;
     color: var(--primary-bg-color);
+    text-overflow: ellipsis;
 }
 
 .form-item > img {
@@ -250,6 +264,7 @@ input::placeholder {
     border: none;
     background-color: var(--primary-bg-color);
     color: white;
+    text-wrap: nowrap;
 }
 
 #promo-cards > div {
@@ -283,7 +298,7 @@ input::placeholder {
 }
 
 #promo-hero {
-    min-height: 515px;
+    aspect-ratio: 1200/514.28;
     width: 100%;
     background-image: url(hote.com/Hotels.com/imgi_8_HP_fr_FR_D_NM.jpg);
     background-size: contain;
@@ -296,7 +311,8 @@ input::placeholder {
     background: var(--secondary-bg-color);
     padding: 1.75rem;
     border-radius: 1rem;
-    width: calc(388px - 3.5rem);
+    width: 32%;
+    box-sizing: border-box;
     position: absolute;
     bottom: 3rem;
     left: 3rem;
@@ -609,6 +625,10 @@ hr {
     padding: 1.5rem;
 }
 
+.app-content p::before {
+    content: "Scannez le code QR avec l'appareil photo de votre appareil et téléchargez notre appli.";
+}
+
 #app ul {
     margin-top: .5rem;
 }
@@ -706,4 +726,206 @@ footer li {
 
 footer hr {
     margin-top: 2rem;
+}
+
+
+@media screen and (max-width: 1200px) {
+
+    #hero {
+        width: calc(100% - 4rem);
+        min-width: unset;
+    }
+
+     main, footer {
+        padding-inline: 2rem;
+        box-sizing: border-box;
+    }   
+
+    nav {
+        align-self: start;
+        padding-inline: 2rem;
+    }
+
+    main {
+        width: 100%;
+        min-width: unset;
+    }
+
+    .booking-card {
+        width: calc(33% - .5rem);
+    }
+
+    .booking-card:last-of-type {
+        display: none;
+    }
+
+    .popular-card {
+        width: calc(33% - .5rem);
+    }
+
+    .popular-card:last-of-type {
+        display: none;
+    }
+
+    footer {
+        width: 100%;
+        padding: 2rem;
+        margin: 0;
+    }
+
+    #footer-content {
+        width: 100%;
+    }
+}
+
+
+@media screen and (max-width:1055px) {
+    #promo-cards > div {
+        width: calc(50% - .5rem);
+    }
+
+    .promo-card > img {
+        height: 50%;
+        aspect-ratio: 1.42/1;
+    }
+
+    #promo-cards > div:last-of-type {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 992px) {
+
+    nav {
+        min-width: 850px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    nav li:first-of-type, nav li:nth-of-type(2), nav li:nth-of-type(3) {
+        display: none;
+    }
+
+    nav li:last-of-type::after {
+        content: url(hote.com/Hotels.com/téléchargement\ \(17\).svg);
+        border: 2px solid #D11544;
+        border-radius: 50%;
+        height: 1rem;
+        width: 1rem;
+        display: inline-block;
+        position: relative;
+        left: 1rem;
+        top: 2px;
+    }
+
+    #discover .img-container {
+        width: calc(33% - .5rem);
+    }
+
+    #discover .flex {
+        justify-content: space-between;
+    }
+
+    #discover .img-container:nth-of-type(4), #discover .img-container:last-of-type {
+        display: none;
+    }
+
+    #promo-hero {
+        align-content: center;
+        padding: 2rem;
+        box-sizing: border-box;
+    }
+
+    #promo-hero > div {
+        width: 64%;
+        position: unset;
+        bottom: unset;
+        left: unset;
+    }
+
+    .booking-card {
+        width: calc(50% - .5rem);
+    }
+
+    .booking-card:nth-of-type(3) {
+        display: none;
+    }
+
+    .app-content p::before {
+        content: "Télécharger l'appli";
+        color: white;
+        text-wrap: wrap;
+        width: 18%;
+        text-align: center;
+        background: var(--primary-bg-color);
+        padding: .1rem 2rem;
+        border-radius: 5rem;
+        display: block;
+    }
+
+    .qr-code-container {
+        display: none;
+    }
+}
+
+@media screen and (max-width:860px) {
+    nav {
+        /* box-sizing: unset */
+    }
+}
+
+@media screen and (max-width:576px) {
+    
+    nav {
+        box-sizing: border-box;
+        min-width: unset;
+    }
+
+    #nav-left > div, #nav-right li {
+        display: none;
+    }
+
+    #nav-right button::after {
+        content: url(hote.com/Hotels.com/téléchargement\ \(17\).svg);
+        border: 2px solid #D11544;
+        border-radius: 50%;
+        height: 1rem;
+        width: 1rem;
+        display: inline-block;
+        position: absolute;
+        right: 2rem;
+        top: 1.5rem;
+    }
+
+    #hero {
+        background-image: unset;
+        height: fit-content;
+    }
+
+    form, #form-items {
+        flex-direction: column;
+    }
+
+    #form-items, .form-item, form button{
+        width: 100%;
+        box-sizing: border-box;
+
+    }
+
+    form {
+        width: 100%;
+        padding: 0;
+    }
+
+    .list-of-lists {
+        flex-direction: column;
+    }
+
+    .list-of-lists ul {
+        width: 100%;
+    }
+
+    footer p {
+        text-align: start;
+    }
 }
